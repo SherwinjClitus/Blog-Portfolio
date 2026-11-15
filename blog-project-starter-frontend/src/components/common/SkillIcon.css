@@ -1,0 +1,13 @@
+
+.skill-icon {
+  display: block;
+  flex-shrink: 0;
+  margin: 0 auto;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.skill-icon__text {
+  font-family: var(--font-hand, cursive);
+  font-weight: bold;
+}

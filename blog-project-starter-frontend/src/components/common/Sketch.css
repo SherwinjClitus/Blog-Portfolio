@@ -1,0 +1,57 @@
+/* Graphite sketch accents — monochrome by default */
+
+.sketch-underline {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+  white-space: nowrap;
+}
+
+.sketch-underline__text {
+  position: relative;
+  z-index: 1;
+}
+
+.sketch-underline__svg {
+  position: absolute;
+  z-index: 0;
+  left: -1%;
+  bottom: -0.34em;
+  width: 102%;
+  height: 0.42em;
+  min-height: 7px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.sketch-arrow {
+  display: block;
+  overflow: visible;
+  color: #171717;
+  pointer-events: none;
+  filter: drop-shadow(0.35px 0.35px 0 rgba(23, 23, 23, 0.18));
+}
+
+/* Slightly imperfect pencil-like movement without adding a JS library. */
+.sketch-underline__svg path,
+.sketch-arrow path {
+  vector-effect: non-scaling-stroke;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sketch-arrow {
+    animation: sketch-arrow-drift 3.8s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes sketch-arrow-drift {
+    0%, 100% { transform: rotate(-0.6deg); }
+    50% { transform: rotate(0.6deg); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sketch-arrow {
+    animation: none;
+  }
+}

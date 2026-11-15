@@ -1,0 +1,163 @@
+/* Graphite Sketch × Neo-Brutalist footer */
+
+.footer {
+  --footer-ink: #171717;
+  --footer-paper: #f4f1e9;
+  --footer-pencil: #77736d;
+
+  position: relative;
+  padding: 48px 8% 24px;
+  color: var(--footer-ink);
+  background: var(--footer-paper);
+  border-top: 3px solid var(--footer-ink);
+  overflow: hidden;
+}
+
+.footer::before {
+  position: absolute;
+  top: 10px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  content: "";
+  background: rgba(23, 23, 23, 0.35);
+}
+
+.footer-inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-main {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px 0 38px;
+}
+
+.footer-brand {
+  max-width: 470px;
+}
+
+.footer-kicker {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 5px 8px;
+  color: var(--footer-paper);
+  background: var(--footer-ink);
+  font-family: var(--font-hand, "Courier New", monospace);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  transform: rotate(-1.5deg);
+}
+
+.footer-brand h2 {
+  margin: 0;
+  color: var(--footer-ink);
+  font-family: var(--font-hand, "Courier New", monospace);
+  font-size: clamp(38px, 6vw, 66px);
+  font-weight: 950;
+  letter-spacing: -4px;
+  line-height: 1;
+}
+
+.footer-brand h2 span {
+  display: inline;
+}
+
+.footer-description {
+  max-width: 390px;
+  margin: 15px 0 0;
+  color: #45433f;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer-top-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 48px;
+  padding: 10px 15px;
+  color: var(--footer-paper);
+  background: var(--footer-ink);
+  border: 2px solid var(--footer-ink);
+  border-radius: 0;
+  box-shadow: 5px 5px 0 var(--footer-pencil);
+  font-family: var(--font-hand, "Courier New", monospace);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 160ms ease, color 160ms ease,
+    background 160ms ease, box-shadow 160ms ease;
+}
+
+.footer-top-button span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.footer-top-button:hover {
+  color: var(--footer-ink);
+  background: var(--footer-paper);
+  box-shadow: 2px 2px 0 var(--footer-ink);
+  transform: translate(3px, 3px);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 18px;
+  border-top: 2px solid var(--footer-ink);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #45433f;
+  font-family: var(--font-hand, "Courier New", monospace);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.footer-note {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 42px 22px 20px;
+  }
+
+  .footer-main {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 28px;
+  }
+
+  .footer-brand h2 {
+    letter-spacing: -2px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .footer-note {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-top-button {
+    transition: none;
+  }
+}
