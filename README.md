@@ -286,4 +286,4 @@ Add screenshots of the deployed application to this section when available. No s
 
 ## Author
 
-**Sherwin J. Clitus** — [GitHub profile](https://github.com/SherwinJClitus)
+**Made with ❤️ Sherwin ** — [GitHub profile](https://github.com/SherwinJClitus)
